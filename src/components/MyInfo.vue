@@ -156,8 +156,9 @@
 		name: 'myInfo',
 		data() {
 			return {
-			  upload:'http://localhost:7777/api/img/insetImg',
-				imageUrl: '',
+			  // upload:'http://localhost:7777/api/img/insetImg',
+        upload:'https://jack.panbingwen.cn:7777/api/img/insetImg',
+        imageUrl: '',
 				//文件上传的参数
 				dialogImageUrl: '',
 				dialogVisible: false,

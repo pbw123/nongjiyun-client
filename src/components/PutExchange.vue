@@ -54,7 +54,7 @@
 			}
 		},
 		mounted() {
-			this.city() //触发获取城市方法
+			// this.city() //触发获取城市方法
 		},
 		methods: {
 			putExchange: function() {
@@ -140,7 +140,7 @@
 			handlePictureCardPreview(file) {
 			    this.dialogImageUrl = file.url;
 			    this.dialogVisible = true;
-				
+
 			},
 			handleExceed(files, fileList) {
 				this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
@@ -148,7 +148,7 @@
 			beforeRemove(file, fileList) {
 				return this.$confirm(`确定移除 ${ file.name }？`);
 			},
-			city() { //定义获取城市方法
+		/*	city() { //定义获取城市方法
 							const geolocation = new BMap.Geolocation();
 							var _this = this
 							geolocation.getCurrentPosition(function getinfo(position) {
@@ -160,7 +160,7 @@
 							}, {
 								provider: 'baidu'
 							});
-						},
+						},*/
 		}
 	}
 </script>

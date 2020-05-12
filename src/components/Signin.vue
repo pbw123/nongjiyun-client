@@ -5,7 +5,7 @@
 				<img src="../assets/njy.png"/>
 			</div>
 			<div class="input-box">
-				<div class="input-phone">		
+				<div class="input-phone">
 					<input type="text" v-model="userDTO.phoneNumber" placeholder="请输入手机号"/>
 				</div>
 				<div class="input-password" style="margin-top: 10px;">
@@ -43,19 +43,22 @@
 		},
 		methods:{
 			signIn: function(userDTO) {
-				var _this=this;
-				console.log(userDTO.phoneNumber)
-				this.$http({
+				let _this=this;
+				console.log(userDTO.phoneNumber);
+				_this.$http({
 					method:'POST',
 					url:this.apiServer+'api/user/signIn',
-					data:{
-						'phoneNumber':userDTO.phoneNumber,
-						'password':userDTO.password
-					},
+          // url:'https://jack.panbingwen.cn:7777/api/user/signIn',
+
+          	data:{
+              'phoneNumber':userDTO.phoneNumber,
+              'password':userDTO.password
+            },
 					header:{
 						'content-type': 'application/json'
 					}
-				}).then(function(res){
+				})
+          .then(function(res){
 					if(res.data.code==0){
 						console.log(res.data.data);
 						var user={
@@ -64,7 +67,7 @@
 							phoneNumber:res.data.data.phoneNumber,
 							password:res.data.data.password,
 							headUrl:res.data.data.headUrl,
-							login:true,
+							login:true
 						};
 						var s = JSON.stringify(user);
 						localStorage.setItem('login_key', s);
@@ -79,7 +82,7 @@
 						_this.tishi=res.data.msg
 					}
 				})
-			},	
+			},
 		}
 	}
 </script>
@@ -104,7 +107,7 @@
 		margin-left: 20%;
 		background-color: rgb(0,158,1);
 		border-radius: 5px;
-		border: 0px; 
+		border: 0px;
 		color: #FFFFFF;
 		font-size: 17px;
 		margin-top: 20px;
@@ -145,7 +148,7 @@
 		background-color: #FFFFFF;
 		display: flex;
 	}
-	
+
 	.menu {
 		display: flex;
 		padding-top: 1%;
@@ -164,8 +167,8 @@
 		/* border: 2px solid rgb(0,158,1); */
 		margin: 0 auto;margin-top: 15px;
 		border-radius: 5px;
-		
-		
+
+
 	}
 	.signin{
 		position: absolute;

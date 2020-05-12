@@ -48,7 +48,8 @@
 	  name: 'putQuestion',
 		data(){
 			return{
-        upload:'http://localhost:7777/api/img/insetImg',
+        // upload:'http://localhost:7777/api/img/insetImg',
+        upload:'https://jack.panbingwen.cn:7777/api/img/insetImg',
         loginUser:JSON.parse(localStorage.getItem('login_key')),
 				question:{
 					content:'',
@@ -84,7 +85,7 @@
 			}
 		},
 		mounted:function(){
-			this.city();
+			// this.city();
 		},
 		methods:{
 			putQuestion:function(){
@@ -176,7 +177,7 @@
                 this.dialogImageUrl = file.url;
                 this.dialogVisible = true;
             },
-			city() { //定义获取城市方法
+		/*	city() { //定义获取城市方法
 							const geolocation = new BMap.Geolocation();
 							var _this = this
 							geolocation.getCurrentPosition(function getinfo(position) {
@@ -188,7 +189,7 @@
 							}, {
 								provider: 'baidu'
 							});
-			},
+			},*/
 		}
 	}
 </script>

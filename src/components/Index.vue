@@ -43,7 +43,7 @@
 					</a>
 					<span style="color: rgb(109,109,109);cursor: pointer;" @click="logout()">退出</span>
 					<p style="margin-top: 30px;color: rgb(109,109,109);line-height: 15px;">
-					<img src="../assets/icon_address.png" 
+					<img src="../assets/icon_address.png"
 					style="height: 13px;width: 10px;margin-right: 3px;">{{LocationCity}}</p>
 				</div>
 			</div>
@@ -107,11 +107,11 @@
 			};
 		},
 		mounted() {
-			this.city(); //触发获取城市方法
+			// this.city(); //触发获取城市方法
 			if(this.user!=null){
 				this.getUserMsg();
 			}
-			
+
 		},
 		created: function() {
 			const loading = this.$loading({
@@ -162,7 +162,7 @@
 				})
 			},
 			//定义获取城市方法
-			city() { 
+	/*		city() {
 				const geolocation = new BMap.Geolocation();
 				var _this = this
 				geolocation.getCurrentPosition(function getinfo(position) {
@@ -174,7 +174,7 @@
 				}, {
 					provider: 'baidu'
 				});
-			},
+			},*/
 		}
 	}
 </script>
