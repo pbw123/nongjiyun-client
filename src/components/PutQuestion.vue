@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<div class="tupian">
-				<el-upload class="upload-demo" action="http://47.101.51.245:8888/api/img/insetImg" :on-preview="handlePictureCardPreview"
+				<el-upload class="upload-demo" :action="upload" :on-preview="handlePictureCardPreview"
 				 :on-remove="handleRemove" :before-remove="beforeRemove" :on-success="handleSuccess" multiple :limit="9" :on-exceed="handleExceed"
 				 :file-list="fileList" list-type="picture-card">
 					<i class="el-icon-plus"></i>
@@ -48,7 +48,8 @@
 	  name: 'putQuestion',
 		data(){
 			return{
-				loginUser:JSON.parse(localStorage.getItem('login_key')),
+        upload:'http://localhost:7777/api/img/insetImg',
+        loginUser:JSON.parse(localStorage.getItem('login_key')),
 				question:{
 					content:'',
 					fenlei:'',
@@ -116,7 +117,7 @@
 			beforeAvatarUpload(file) {
 				const isJPG = file.type === 'image/jpeg';
 				const isLt2M = file.size / 1024 / 1024 < 2;
-			
+
 				if (!isJPG) {
 					this.$message.error('上传头像图片只能是 JPG 格式!');
 				}
@@ -150,7 +151,7 @@
 				const isPNG = file.type === 'image/png';
 				const isBMP = file.type === 'image/bmp';
 				const isLt2M = file.size / 1024 / 1024 < 2;
-			
+
 				if (!isJPG && !isGIF && !isPNG && !isBMP) {
 					this.$message.error('上传图片必须是JPG/GIF/PNG/BMP 格式!');
 				}

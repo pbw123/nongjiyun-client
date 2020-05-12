@@ -63,7 +63,7 @@
 				<span>头&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像：</span>
 				<img :src="userInfo.headUrl" style="height: 60px;width: 60px;margin-top: 5px;"/>
 				<!-- <button class="avatar-btn">上传头像</button> -->
-				<el-upload class="upload-demo" action="http://47.101.51.245:8888/api/img/insetImg"
+				<el-upload class="upload-demo" :action="upload"
 				 :on-success="handleSuccess" :on-exceed="handleExceed"
 				 :file-list="fileList" :show-file-list="false"
                  :before-upload="beforeAvatarUpload">
@@ -156,6 +156,7 @@
 		name: 'myInfo',
 		data() {
 			return {
+			  upload:'http://localhost:7777/api/img/insetImg',
 				imageUrl: '',
 				//文件上传的参数
 				dialogImageUrl: '',
@@ -649,7 +650,7 @@
 		height: 70px;
 		line-height: 70px;
 		border-bottom: 1px solid rgb(92, 92, 91);
-		
+
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
