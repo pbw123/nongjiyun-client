@@ -26,7 +26,7 @@
 	.all {
 		background-color: rgb(241, 241, 241);
 		background-size: 100%;
-		background-image: url(../assets/nongtian3.jpg);
+		background-image: url(/static/nongtian3.jpg);
 	}
 
 	.container {
@@ -37,7 +37,7 @@
 
 
 	.sign-box {
-		
+
 	}
 
 </style>

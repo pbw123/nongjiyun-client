@@ -3,7 +3,9 @@
 		<div class="header">
 			<div class="menu">
 				<div class="left">
-					<img src="../assets/logo_njy.png" class="img"/>
+
+            <img src="/static/logo_njy.png" class="img"  @click="getHome()"/>
+
 				</div>
 				<div class="right">
 					<li class="li1">
@@ -32,29 +34,38 @@
 				</div>
 			</div>
 			<div class="login" style="display: flex;" v-if="user!=null">
-				<div class="avatar" style="line-height: 170px;" v-if="user.login">
-					<img :src="userInfo.headUrl" style="height: 50px;width: 50px;border-radius: 50%;" />
+        <router-link to="/userCenter">
+
+        <div class="avatar" style="line-height: 170px;" v-if="user.login">
+          <el-tooltip content="个人中心" placement="bottom" effect="dark">
+
+          <img :src="userInfo.headUrl" style="height: 50px;width: 50px;border-radius: 50%;" />
+          </el-tooltip>
 				</div>
+        </router-link>
 				<div v-if="user.login" style="margin-left: 10px;line-height: 5px;margin-top: 35px;">
-					<a href="/userCenter">
-						<el-tooltip content="个人中心" placement="bottom" effect="light">
-							<p style="color: rgb(0,158,1);font-size: 18px;cursor: pointer;">{{userInfo.userName}}</p>
-						</el-tooltip>
-					</a>
+          <router-link to="/userCenter">
+              <p style="color: rgb(0,158,1);font-size: 18px;cursor: pointer;">{{userInfo.userName}}</p>
+          </router-link>
+
 					<span style="color: rgb(109,109,109);cursor: pointer;" @click="logout()">退出</span>
 					<p style="margin-top: 30px;color: rgb(109,109,109);line-height: 15px;">
-					<img src="../assets/icon_address.png"
+					<img :src="icon"
 					style="height: 13px;width: 10px;margin-right: 3px;">{{LocationCity}}</p>
 				</div>
+
 			</div>
+
+
 			<div class="login" style="display: flex;" v-if="user==null">
 				<div class="avatar" style="line-height: 170px;">
-					<img src="../assets/default.png" style="height: 50px;width: 50px;border-radius: 50%;" />
+					<img src="/static/default.png" style="height: 50px;width: 50px;border-radius: 50%;" />
 				</div>
 				<div style="margin-left: 10px;line-height: 5px;margin-top: 45px;">
-					<a href="/sign">
-						<p style="color: rgb(0,158,1);font-size: 16px;cursor: pointer;">点击登录</p>
-					</a>
+          <router-link to="/sign">
+            <p style="color: rgb(0,158,1);font-size: 16px;cursor: pointer;">点击登录</p>
+          </router-link>
+
 				</div>
 			</div>
 		</div>
@@ -64,18 +75,18 @@
 		<div class="footer">
 			<div class="top">
 				<div class="footer_left">
-					<img src="../assets/logo_njy_white.png" class="top_img" />
+					<img src="/static/logo_njy_white.png" class="top_img" />
 				</div>
 				<div class="footer_right">
 					<div class="footer_phone">
-						<img src="../assets/img_code_android.png" class="footer_img" />
+						<img :src="img" class="footer_img" />
 						<div class="phone">
 							<p>扫一扫</p>
 							<p>安卓下载</p>
 						</div>
 					</div>
 					<div class="footer_phone">
-						<img src="../assets/img_code_ios.png" class="footer_img" />
+						<img :src="img" class="footer_img" />
 						<div class="phone">
 							<p>扫一扫</p>
 							<p>苹果下载</p>
@@ -99,6 +110,8 @@
 		name: 'Index',
 		data() {
 			return {
+        icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
+        img: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/72d6efca-14c9-481b-b073-f45d68578449.jpg',
 				storageData: {},
 				user: JSON.parse(localStorage.getItem('login_key')),
 				LocationCity: "正在定位..." ,//给渲染层定义一个初始值
@@ -127,6 +140,10 @@
 			}, 1000);
 		},
 		methods: {
+		  //回到首页
+      getHome() {
+        this.$router.push('/home');
+      },
 			//退出登录，删除本地存储
 			logout: function() {
 				var _this = this;

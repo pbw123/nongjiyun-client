@@ -359,7 +359,7 @@
 						userId: _this.loginuser.userId,
 						sort:_this.keyword
 					}
-			
+
 				}).then(function(res) {
 					if (res.data.code == 0) {
 						_this.videos_s = res.data.data;
@@ -478,7 +478,7 @@
 		text-align: center;
 		color: black;
 		line-height: 64px;
-		background-image: url(../assets/icon_category_08.png);
+		background-image: url(/static/icon_category_08.png);
 		font-size: 1.17em;
 		font-weight: bold;
 	}

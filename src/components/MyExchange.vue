@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="block">
-				<el-pagination 
+				<el-pagination
 				background layout="prev, pager, next,jumper" :total="totalRecord"
 				:page-size="pageSize" :current-page="currPage"
 				@current-change="handleCurrentChange"
@@ -27,7 +27,7 @@
 		</div>
 		<div class="none" v-show="show">
 			<div class="none-text">
-				<div class="img"><img src="../assets/铁锹.png" style="height: 70px;width: 70px;" /></div>
+				<div class="img"><img src="/static/铁锹.png" style="height: 70px;width: 70px;" /></div>
 				<span>暂无内容</span>
 			</div>
 		</div>

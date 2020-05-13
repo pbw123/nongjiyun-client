@@ -9,9 +9,9 @@
                      :playsinline="true"
                      :options="playerOptions"
                      @play="onPlayerPlay($event)"
-                     @pause="onPlayerPause($event)"> 
-					 </video-player> 
-	  </div>	
+                     @pause="onPlayerPause($event)">
+					 </video-player>
+	  </div>
 		</div>
 		</div>
 </template>
@@ -32,9 +32,9 @@ export default {
         fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
         sources: [{
           type: "video/mp4",
-          src: "http://object.jsnjy.net.cn/OSS/178.mp4" //你的m3u8地址（必填）
+          src: "https://object.jsnjy.net.cn/OSS/178.mp4" //你的m3u8地址（必填）
         }],
-        poster: "http://object.jsnjy.net.cn/OSS/20190509/4140d5c2c0ea4d2793bf2ddb2fc3a29e.JPG", //你的封面地址
+        poster: "https://object.jsnjy.net.cn/OSS/20190509/4140d5c2c0ea4d2793bf2ddb2fc3a29e.JPG", //你的封面地址
         width: document.documentElement.clientWidth,
         notSupportedMessage: '此视频暂无法播放，请稍后再试', //允许覆盖Video.js无法播放媒体源时显示的默认信息。
 //        controlBar: {
@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     onPlayerPlay(player) {
-      
+
     },
     onPlayerPause(player){
     }
@@ -83,7 +83,7 @@ padding-bottom: 20px;
     width: 21%;
     float: right;
     line-height: 70px;
-    background:url(../assets/icon_category_08.png);
+    background:url(/static/icon_category_08.png);
 }
 .right_text{
 	font-size: 20px;

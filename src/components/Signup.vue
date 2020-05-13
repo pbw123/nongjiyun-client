@@ -24,7 +24,7 @@
 		</div>
 		<div class="signup2" v-show="vshow">
 			<div class="logo-title">
-				<img src="../assets/njy.png"/>
+				<img src="/static/njy.png"/>
 				<div style="height: 60px;line-height: 80px;">
 					<span class="title-text">注册信息</span>
 				</div>
@@ -484,7 +484,7 @@
 								_this.$alert('已注册成功，请先登录。', '注册成功', {
                                     confirmButtonText: '确定',
                                     callback: action => {
-                                       _this.$router.push('/sign') 
+                                       _this.$router.push('/sign')
                                     }
                                 });
 // 								alert("注册成功，请登录")

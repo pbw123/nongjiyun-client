@@ -19,11 +19,11 @@
 				</div>
 				<div style="margin-top: 40px;display: flex;">
 					<div style="height: 25px;line-height: 25px;margin-right: 10px;cursor: pointer;" v-if="exchange.isLike == 1" @click="isLike(exchange.id, loginuser.userId)">
-						<img src="../assets/zanone.png" style="height: 20px;width: 20px;" />
+						<img :src="nozan" style="height: 20px;width: 20px;" />
 						<span style="line-height: 25px;color: rgb(109,109,109);font-size: 16px;">{{ exchange.like }}</span>
 					</div>
 					<div style="height: 25px;line-height: 25px;margin-right: 10px;cursor: pointer;" v-if="exchange.isLike == 0" @click="isLike(exchange.id, loginuser.userId)">
-						<img src="../assets/zanthree.png" style="height: 20px;width: 20px;" />
+						<img :src="zan" style="height: 20px;width: 20px;" />
 						<span style="line-height: 25px;color: rgb(0,158,1);font-size: 16px;">{{ exchange.like }}</span>
 					</div>
 					<button class="btn-foll" v-if="loginuser.userId != exchangeUser.id && exchange.status == 1" @click="collect()">☆收藏</button>
@@ -58,13 +58,13 @@
 							<div style="width: 8%;" v-if="item.userId == loginuser.userId"><button class="delete-btn" @click="deletePL(item.id)">删除</button></div>
 							<div style="width: 8%;" v-if="item.userId != loginuser.userId && item.isLike == 1">
 								<div style="height: 25px;line-height: 25px;cursor: pointer;" @click="replyLike(item.id, loginuser.userId)">
-									<img src="../assets/zanone.png" style="height: 20px;width: 20px;" />
+									<img src="/static/zanone.png" style="height: 20px;width: 20px;" />
 									<span style="line-height: 25px;color: rgb(109,109,109);font-size: 16px;">{{ item.like }}</span>
 								</div>
 							</div>
 							<div style="width: 8%;" v-if="item.userId != loginuser.userId && item.isLike == 0">
 								<div style="height: 25px;line-height: 25px;cursor: pointer;" @click="replyLike(item.id, loginuser.userId)">
-									<img src="../assets/zanthree.png" style="height: 20px;width: 20px;" />
+									<img src="/static/zanthree.png" style="height: 20px;width: 20px;" />
 									<span style="line-height: 25px;color: rgb(0,158,1);font-size: 16px;">{{ item.like }}</span>
 								</div>
 							</div>
@@ -83,6 +83,8 @@ export default {
 	name: 'exchangeDetail',
 	data() {
 		return {
+      nozan: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/e8120d56-da5b-45e8-a9da-f9e1b6facba5.jpg',
+      zan: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/42278018-6c1f-4440-b737-c4b74a116788.jpg',
 			eId: 0,
 			exchange: {},
 			exchangeUser: {},

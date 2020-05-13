@@ -39,7 +39,7 @@
 
 								<div class="zhong-ad">
 
-									<img src="../assets/icon_address.png" style="height: 17px;width: 12px;margin-right: 3px;" />
+									<img src="/static/icon_address.png" style="height: 17px;width: 12px;margin-right: 3px;" />
 									<div >
 										<span style="color: rgb(109,109,109);font-size: 12px;">{{item.question.address}}</span>
 									</div>
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<div class="block">
-						<el-pagination 
+						<el-pagination
 						background layout="prev, pager, next,jumper" :total="totalRecord_q"
 						:page-size="pageSize" :current-page="currPage_q"
 						@current-change="handleCurrentChange_question"
@@ -68,7 +68,7 @@
 				<div class="none" v-show="show1">
 					<div class="none-text">
 						<div class="img">
-							<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+							<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 						</div>
 						<span>暂无内容</span>
 					</div>
@@ -101,7 +101,7 @@
 									<span>{{handleContent(item.exchange.content)}}</span>
 								</div>
 								<div class="zhong-ad">
-									<img src="../assets/icon_address.png" style="height: 17px;width: 12px;margin-right: 3px;" />
+									<img src="/static/icon_address.png" style="height: 17px;width: 12px;margin-right: 3px;" />
 									<div>
 										<span style="color: rgb(109,109,109);font-size: 12px;">{{item.exchange.address}}</span>
 										<!-- <span style="color: rgb(109,109,109);font-size: 12px;">江苏省南京市栖霞区羊山北路</span> -->
@@ -131,7 +131,7 @@
 				<div class="none" v-show="show2">
 					<div class="none-text">
 						<div class="img">
-							<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+							<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 						</div>
 						<span>暂无内容</span>
 					</div>
@@ -150,7 +150,7 @@
 						</div>
 						<div class="xia_news" style="margin-left: 10px;">
 							<div class="left_img" v-if="item.icon!=null">
-								<img :src="item.icon" class="kuai_img" />		
+								<img :src="item.icon" class="kuai_img" />
 							</div>
 							<div class="xia_content">
 								<div style="height: 80px;">
@@ -171,7 +171,7 @@
 				<div class="none" v-show="show3">
 					<div class="none-text">
 						<div class="img">
-							<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+							<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 						</div>
 						<span>暂无内容</span>
 					</div>
@@ -211,7 +211,7 @@
 				<div class="none" v-show="show4">
 					<div class="none-text">
 						<div class="img">
-							<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+							<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 						</div>
 						<span>暂无内容</span>
 					</div>
@@ -545,13 +545,13 @@
 								message: '收藏成功！',
 								type: 'success'
 							});
-						
+
 						} else {
 							Message({
 								message: '已取消收藏！',
 								type: 'success'
 							});
-						
+
 						}
 					} else {
 						Message({
@@ -650,8 +650,8 @@
 				_this.currPage_v= val;
 				_this.getCollectVideo();
 			}
-			
-			
+
+
 		}
 	}
 </script>

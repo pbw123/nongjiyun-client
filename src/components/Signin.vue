@@ -2,7 +2,7 @@
 	<div class="signin">
 		<div class="form">
 			<div class="avatar">
-				<img src="../assets/njy.png"/>
+				<img src="/static/njy.png"/>
 			</div>
 			<div class="input-box">
 				<div class="input-phone">
@@ -20,7 +20,9 @@
 					<a href="">忘记密码？</a>
 				</div>
 				<div class="right">
-					<a href="./Signup">没有账号？现在注册</a>
+          <router-link to="/Signup">
+            没有账号？现在注册
+          </router-link>
 				</div>
 			</div>
 		</div>

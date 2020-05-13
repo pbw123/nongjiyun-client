@@ -2,7 +2,7 @@
 	<div>
 		<div id="slider">
 			<div class="window" @mouseover="stop" @mouseleave="play">
-				<ul class="container" :style="containerStyle"> 
+				<ul class="container" :style="containerStyle">
 					<li>
 						<img :style="{width:imgWidth+'px'}" :src="sliders[sliders.length - 1].img" alt="">
 					</li>
@@ -32,9 +32,9 @@
 						</a>
 						<div class="n-time">
 							<a style="line-height: 14px;margin-left: 20px;">
-								<img src="../assets/calendar.png" style="width: 14px; height: 14px;heiborder: none;vertical-align: middle;" />
+								<img src="/static/calendar.png" style="width: 14px; height: 14px;heiborder: none;vertical-align: middle;" />
 								<span style="color: #808080;font-size: 12px;">{{handleTime(topnew.createTime)}}</span>
-								<img src="../assets/icon_look.png" style="width: 16px;height: 9.8px;" />
+								<img src="/static/icon_look.png" style="width: 16px;height: 9.8px;" />
 								<span style="color: #808080;font-size: 12px;">{{topnew.readNumber}}</span>
 							</a>
 						</div>
@@ -51,9 +51,10 @@
 			</div>
 			<div class="news-more">
 				<div style="width: 100%;height: 10px;"></div>
-				<a href="../news">
-					<span>查看更多</span>
-				</a>
+
+        <router-link to="/news">
+          查看更多
+        </router-link>
 			</div>
 		</div>
 		<div class="ask" style="margin-top: 70px;width: 100%;background-color: #FFFFFF;">
@@ -73,14 +74,14 @@
 						</div>
 						<div class="a-address" style="color: #808080;">{{ask.user.userAddress}}</div>
 						<a>
-							<div class="a-question" style="cursor: pointer;margin-top: 10px;height: 36px; margin-left: 20px;" 
-							@click="gotoDetail(ask.id,loginUser.userId)">	
+							<div class="a-question" style="cursor: pointer;margin-top: 10px;height: 36px; margin-left: 20px;"
+							@click="gotoDetail(ask.id,loginUser.userId)">
 								{{handleContent(ask.content)}}
 							</div>
 						</a>
 						<div style=" display: flex;line-height: 17px;color: #808080;">
 							<div class="a-location" style="padding-top: 10px;">
-								<img src="../assets/icon_address.png" style="width: 12px;height: 17px;">
+								<img src="/static/icon_address.png" style="width: 12px;height: 17px;">
 							</div>
 							<div style="padding-top: 10px;">&nbsp;&nbsp;{{ask.user.userAddress}}</div>
 						</div>
@@ -92,10 +93,11 @@
 				</ul>
 			</div>
 			<div class="ask-more" style="margin-top: 10px;text-align: center;">
-				<a href="../ask">
-					<span>查看更多</span>
-				</a>
-			</div>
+        <router-link to="/ask">
+          查看更多
+        </router-link>
+
+      </div>
 			<div style="width: 100%;height: 10px;"></div>
 		</div>
 		<div class="video" style="margin-top: 70px;width: 100%;height: 410px;background-color: #FFFFFF;margin-bottom: 20px;">
@@ -107,7 +109,7 @@
 					<li v-for="(video,index) in videos" :key="index" v-if="index<2">
 						<div class="v-img">
 							<a tag="a" target="_blank" :href="video.videoUrl">
-							<img :src="video.img" />	
+							<img :src="video.img" />
 							</a>
 						</div>
 						<div class="v-title" style="height: 70px; color: #808080;background-color: rgb(250,250,250);width: 393px;">
@@ -122,12 +124,13 @@
 				</ul>
 			</div>
 			<div style="width: 100%;height: 10px;"></div>
-			<div class="video-more">
+			<div class="video-more" >
 				<div style="width: 100%;height: 10px;"></div>
-				<a href="../videoList">
-					<span>查看更多</span>
-				</a>
-			</div>
+        <router-link to="/videoList">
+          查看更多
+        </router-link>
+
+      </div>
 		</div>
 	</div>
 </template>
@@ -153,28 +156,28 @@
 				loginUser:JSON.parse(localStorage.getItem('login_key')),
 				sliders: [{
 						// url:''
-						img: 'http://object.jsnjy.net.cn/OSS/20190505/7c10d23ab3c2416d8f55ed2468062d4f.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20190505/7c10d23ab3c2416d8f55ed2468062d4f.jpg'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20190503/f51318fdc3e44974bfb1358c86360683.JPG'
+						img: 'https://object.jsnjy.net.cn/OSS/20190503/f51318fdc3e44974bfb1358c86360683.JPG'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20190423/565eaead098c454cbaf670fc30d82f9d.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20190423/565eaead098c454cbaf670fc30d82f9d.jpg'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20190430/fa89336790664ccab47dfe45038c634b.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20190430/fa89336790664ccab47dfe45038c634b.jpg'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20181014/1394c125cf5c4b0c8e535e21355c8c6c.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20181014/1394c125cf5c4b0c8e535e21355c8c6c.jpg'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20190111/26b6545c4d7445c098ad4b356384b1b7.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20190111/26b6545c4d7445c098ad4b356384b1b7.jpg'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20180621/eb0c40f36aec465a8c20388ca8bdb515.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20180621/eb0c40f36aec465a8c20388ca8bdb515.jpg'
 					},
 					{
-						img: 'http://object.jsnjy.net.cn/OSS/20190320/dcbfe44a78ca43e1a74421472578b459.jpg'
+						img: 'https://object.jsnjy.net.cn/OSS/20190320/dcbfe44a78ca43e1a74421472578b459.jpg'
 					},
 				],
 				imgWidth: 1025,
@@ -217,7 +220,7 @@
 			},1000);
 		},
 		methods: {
-			
+
 			gotoNewsDetail: function(id,userId) {
 				this.$router.push({path:'/NewsDetail',query:{id:id,userId:userId}});
 			},
@@ -232,7 +235,7 @@
 					header:{
 						'content-type':'application/x-www-form-urlencoded'
 					}
-					 
+
 				}).then(function(res){
 						if(res.data.code==0){
 						_this.videos = res.data.data;
@@ -256,7 +259,7 @@
 					}else{
 						alert('加载数据失败');
 					}
-				})		
+				})
 			},
 			getImgs:function(){
 				var _this=this;
@@ -272,7 +275,7 @@
 					}else{
 						alert('加载数据失败');
 					}
-				})		
+				})
 			},
 			getAsks:function(){
 				var _this=this;
@@ -288,7 +291,7 @@
 					}else{
 						alert('加载数据失败');
 					}
-				
+
 				})
 			},
 			init() {

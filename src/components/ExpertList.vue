@@ -42,7 +42,7 @@
 									<span>问题：{{item.number}}</span>
 
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
@@ -77,10 +77,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -107,10 +107,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -137,10 +137,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -167,10 +167,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -197,17 +197,17 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
 					>
 					</el-pagination>
 				</div>
-			</div>	
+			</div>
 			<div v-show="msg ===6">
 				<div class="list">
 					<div class="list-content" v-for="(item,index) in expertList2" :key="index">
@@ -227,10 +227,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -257,10 +257,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -287,10 +287,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -317,10 +317,10 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="block" v-if="totalRecord2>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord2"
 					:page-size="pageSize" :current-page="currPage2"
 					@current-change="handleCurrentChange2"
@@ -470,7 +470,7 @@
 	text-align: center;
 	color: black;
 	line-height: 64px;
-	background-image: url(../assets/icon_category_08.png);
+	background-image: url(/static/icon_category_08.png);
 	font-size: 1.17em;
 	font-weight: bold;
 }

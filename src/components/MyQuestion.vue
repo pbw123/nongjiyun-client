@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				<div class="block" v-if="totalRecord>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord"
 					:page-size="pageSize" :current-page="currPage"
 					@current-change="handleCurrentChange"
@@ -37,7 +37,7 @@
 			<div class="none" v-show="show_m">
 				<div class="none-text">
 					<div class="img">
-						<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+						<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 					</div>
 					<span class="zwnr">暂无内容</span>
 				</div>
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 				<div class="block" v-if="totalRecord_e>pageSize">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord_e"
 					:page-size="pageSize" :current-page="currPage_e"
 					@current-change="handleCurrentChange_e"
@@ -76,7 +76,7 @@
 			<div class="none" v-show="show_e">
 				<div class="none-text">
 					<div class="img">
-						<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+						<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 					</div>
 					<span class="zwnr">暂无内容</span>
 				</div>
@@ -301,7 +301,7 @@
 				if(content.length>65){
 					return content.substring(0,65)+'...[详情]';
 				}else{
-					return content.substring(0,65)	
+					return content.substring(0,65)
 				}
 			},
 		}
@@ -315,31 +315,31 @@
 		border-bottom: 1px solid rgb(114, 114, 114);
 		line-height: 50px;
 	}
-	
+
 	.list_text {
 		text-decoration: none;
 		color: rgb(109, 109, 109);
 		padding: 1em 4em;
 	}
-	
+
 	.top-text {
 		width: 50%;
 		text-align: center;
 	}
-	
+
 	.nav-item {
 		text-decoration: none;
 		color: rgb(109, 109, 109);
 		font-size: 16px;
 	}
-	
+
 	.cur {
 		text-decoration: none;
 		color: rgb(0, 158, 1);
 		font-size: 16px;
 		border-bottom: 3px solid rgb(0, 158, 1);
 	}
-	
+
 	.cur1 {
 		color: rgb(0, 158, 1);
 	}
@@ -347,7 +347,7 @@
 		display: flex;
 		margin-bottom: 25px;
 	}
-	
+
 	.question-content span {
 		font-size: 17px;
 	}

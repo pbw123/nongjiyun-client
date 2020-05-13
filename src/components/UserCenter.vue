@@ -3,11 +3,11 @@
 		<div class="header">
 			<div class="menu">
 				<div class="left">
-					<a href="/home">
-						<el-tooltip content="首页" placement="bottom" effect="light">
-							<img src="../assets/logo_njy.png" class="img" />
-						</el-tooltip>
-					</a>
+          <router-link to="/home">
+            <el-tooltip content="首页" placement="bottom">
+              <img src="/static/logo_njy.png" class="img" />
+            </el-tooltip>
+          </router-link>
 				</div>
 			</div>
 		</div>
@@ -60,18 +60,18 @@
 		<div class="footer">
 			<div class="top">
 				<div class="footer_left">
-					<img src="../assets/logo_njy_white.png" class="top_img" />
+					<img src="/static/logo_njy_white.png" class="top_img" />
 				</div>
 				<div class="footer_right">
 					<div class="footer_phone">
-						<img src="../assets/img_code_android.png" class="footer_img" />
+						<img src="/static/img_code_android.png" class="footer_img" />
 						<div class="phone">
 							<p>扫一扫</p>
 							<p>安卓下载</p>
 						</div>
 					</div>
 					<div class="footer_phone">
-						<img src="../assets/img_code_ios.png" class="footer_img" />
+						<img src="/static/img_code_ios.png" class="footer_img" />
 						<div class="phone">
 							<p>扫一扫</p>
 							<p>苹果下载</p>

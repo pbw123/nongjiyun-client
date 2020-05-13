@@ -38,7 +38,7 @@
 						[提问数量]
 						<span @click="gotoQuestionList(expertInfo.id)">
 							<a class="expert-questionCount">{{ expertInfo.number }}</a>
-							<a href="" class="expert-more"><img src="../assets/icon_look.png" /></a>
+							<a href="" class="expert-more"><img src="/static/icon_look.png" /></a>
 						</span>
 					</p>
 					<p>
@@ -156,7 +156,7 @@ export default {
 	height: 255px;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	background-image: url(../assets/expertDetail.jpg);
+	background-image: url(/static/expertDetail.jpg);
 	z-index: 999;
 	background-position: center;
 	position: relative;

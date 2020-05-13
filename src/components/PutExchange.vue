@@ -12,7 +12,7 @@
 				</div>
 			</div>
 			<div class="tupian">
-				<el-upload class="upload-demo" action="http://47.101.51.245:8888/api/img/insetImg" :on-preview="handlePictureCardPreview"
+				<el-upload class="upload-demo" action="https://jack.panbingwen.cn:7777/api/img/insetImg" :on-preview="handlePictureCardPreview"
 				 :on-remove="handleRemove" :before-remove="beforeRemove" :on-success="handleSuccess" multiple :limit="9" :on-exceed="handleExceed"
 				 :file-list="fileList" list-type="picture-card">
 					<i class="el-icon-plus"></i>
@@ -23,7 +23,7 @@
 				</el-dialog>
 			</div>
 			<div class="address">
-				<img src="../assets/icon_address.png" style="height: 20px;width: 17px;" />
+				<img :src="icon" style="height: 20px;width: 17px;" />
 				<span style="margin-left: 5px;">{{LocationCity}}</span>
 			</div>
 			<div class="btn">
@@ -41,6 +41,7 @@
 		name: 'putExchange',
 		data() {
 			return {
+        icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
 				loginUser: JSON.parse(localStorage.getItem('login_key')),
 				content: '',
 				imageUrl: '',

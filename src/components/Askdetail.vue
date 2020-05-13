@@ -54,13 +54,13 @@
 							<div style="width: 8%;" v-if="item.userId == loginuser.userId"><button class="delete-btn" @click="deletePL(item.id)">删除</button></div>
 							<div style="width: 8%;" v-if="item.userId != loginuser.userId && item.isLike == 1">
 								<div class="a_img" @click="replyLike(item.id, loginuser.userId)">
-									<img src="../assets/zanone.png" style="height: 20px;width: 20px;" />
+									<img src="/static/zanone.png" style="height: 20px;width: 20px;" />
 									<span>{{ item.like }}</span>
 								</div>
 							</div>
 							<div style="width: 8%;" v-if="item.userId != loginuser.userId && item.isLike == 0">
 								<div class="a_img" @click="replyLike(item.id, loginuser.userId)">
-									<img src="../assets/zanthree.png" style="height: 20px;width: 20px;" />
+									<img src="/static/zanthree.png" style="height: 20px;width: 20px;" />
 									<span style="color: rgb(0,158,1);">{{ item.like }}</span>
 								</div>
 							</div>

@@ -29,7 +29,7 @@
 				<el-dialog :visible.sync="dialogVisible"><img width="100%" :src="dialogImageUrl" alt="" /></el-dialog>
 			</div>
 			<div class="address" style="margin-top: 10px;height: 20px;line-height: 20px;display: flex;">
-				<img src="../assets/icon_address.png" style="height: 20px;width: 17px;" />
+				<img :src="icon" style="height: 20px;width: 17px;" />
 				<span style="margin-left: 5px;">{{ LocationCity }}</span>
 			</div>
 			<div class="btn" style="height: 100px;margin-top: 50px;border-bottom: 2px solid rgb(92,92,91);"><button class="put-btn" @click="putQuestion()">提交</button></div>
@@ -43,6 +43,7 @@ export default {
 	name: 'askExpert',
 	data() {
 		return {
+      icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
 			id: 0,
 			loginUser: JSON.parse(localStorage.getItem('login_key')),
 			content: '',

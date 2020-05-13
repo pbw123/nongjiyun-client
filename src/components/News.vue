@@ -52,7 +52,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-			
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -69,7 +69,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -86,7 +86,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -103,7 +103,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -120,7 +120,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -137,7 +137,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -154,7 +154,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -171,7 +171,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -188,7 +188,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -205,7 +205,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -222,7 +222,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -239,7 +239,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -256,7 +256,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -273,7 +273,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -290,7 +290,7 @@
 						<div class="xia_content">
 							<div style="height: 80px;">
 								<span class="xia_text" @click="gotoDetail(article.id)" v-html="handleContent(article.content)"></span>
-				
+
 							</div>
 							<div>
 								<span class="xia_text" @click="gotoDetail(article.id)">{{handleTime(article.createTime)}}&nbsp;&nbsp;阅读量:{{article.readNumber}}</span>
@@ -304,7 +304,7 @@
 </template>
 
 <script>
-	
+
 	export default {
 		name: 'News',
 		data() {
@@ -324,7 +324,7 @@
 // 						img: 'http://object.jsnjy.net.cn/OSS/20190430/7bb2e2d17ad143908eea92c84f616e2b.jpg',
 // 						time: '2019-02-23 06:02:47  阅读量：1443',
 // 					},
-// 					
+//
 // 				]
 			};
 		},
@@ -441,7 +441,7 @@
 		text-align: center;
 		color: black;
 		line-height: 64px;
-		background-image: url(../assets/icon_category_08.png);
+		background-image: url(/static/icon_category_08.png);
 		font-size: 1.17em;
 		font-weight: bold;
 
@@ -499,19 +499,19 @@
 		margin-left: 4%;
 		cursor: pointer;
 	}
-	
+
 	.shang {}
-	
+
 	.shang_text {
 		font-size: 18px;
 		color: #333;
 		text-decoration: none;
 	}
-	
+
 	.xia {
 		display: flex;
 	}
-	
+
 	.kuai_img {
 		display: block;
 		width: 150px;
@@ -519,13 +519,13 @@
 		float: left;
 		margin-right: 3%;
 	}
-	
+
 	.xia_content {
 		padding-top: 5px;
 		width: 75%;
 		margin-left: 3%;
 	}
-	
+
 	.xia_text {
 		color: #808080;
 		text-decoration: none;

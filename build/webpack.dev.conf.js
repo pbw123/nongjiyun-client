@@ -45,6 +45,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true,
+      favicon: path.resolve('favicon.ico')
+    }),
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),

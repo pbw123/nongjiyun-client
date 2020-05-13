@@ -156,7 +156,7 @@
 		name: 'myInfo',
 		data() {
 			return {
-			  // upload:'http://localhost:7777/api/img/insetImg',
+			  // upload:'https://localhost:7777/api/img/insetImg',
         upload:'https://jack.panbingwen.cn:7777/api/img/insetImg',
         imageUrl: '',
 				//文件上传的参数
@@ -341,10 +341,12 @@
 							type: 'success',
 						});
 						_this.show = false;
-						setTimeout(function() {
-							location.reload();
-						}, 1000)
-					} else {
+						// setTimeout(function() {
+						// 	location.reload();
+						// }, 1000)
+            _this.$router.push('/userCenter');
+
+          } else {
 						Message({
 							message: '修改失败!！',
 							type: 'error',
@@ -537,16 +539,19 @@
 				this.imageUrl = URL.createObjectURL(file.raw);
 			},
 			beforeAvatarUpload(file) {
-				const isJPG = file.type === 'image/jpeg';
-				const isLt2M = file.size / 1024 / 1024 < 2;
+        const isJPG = file.type === 'image/jpeg';
+        const isGIF = file.type === 'image/gif';
+        const isPNG = file.type === 'image/png';
+        const isBMP = file.type === 'image/bmp';
+        const isLt2M = file.size / 1024 / 1024 < 2;
 
-				if (!isJPG) {
-					this.$message.error('上传头像图片只能是 JPG 格式!');
-				}
-				if (!isLt2M) {
-					this.$message.error('上传头像图片大小不能超过 2MB!');
-				}
-				return isJPG && isLt2M;
+        if (!isJPG && !isGIF && !isPNG && !isBMP) {
+          this.$message.error('上传图片必须是JPG/GIF/PNG/BMP 格式!');
+        }
+        if (!isLt2M) {
+          this.$message.error('上传图片大小不能超过 2MB!');
+        }
+        return (isJPG || isBMP || isGIF || isPNG) && isLt2M;
 			},
 			//文件上传成功的钩子函数
 			handleSuccess(res, file) {

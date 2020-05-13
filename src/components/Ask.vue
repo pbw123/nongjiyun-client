@@ -8,7 +8,8 @@
 			</div>
 			<div class="more">
 				<div style="width: 100%;height: 10px;"></div>
-				<a tag="a" target="_blank" href="../expertList"><span>查看更多</span></a>
+<!--				<a tag="a" target="_blank" href=""><span></span></a>-->
+        <router-link to="../expertList">查看更多</router-link>
 			</div>
 		</div>
 		<div class="right">
@@ -37,7 +38,7 @@
 								<div class="a-question" @click="gotoDetail(asking.id, loginUser.userId)">{{ asking.content }}</div>
 							</a>
 							<div class="address_c" @click="gotoDetail(asking.id, loginUser.userId)">
-								<div class="a-location" style="padding-top: 10px;"><img src="../assets/icon_address.png" style="width: 12px;height: 17px;" /></div>
+								<div class="a-location" style="padding-top: 10px;"><img src="/static/icon_address.png" style="width: 12px;height: 17px;" /></div>
 								<div class="location" style="padding-top: 10px;">&nbsp;&nbsp;{{ asking.address }}</div>
 								<!-- <div class="location" style="padding-top: 10px;">&nbsp;&nbsp;江苏省盐城市射阳县018乡道靠近三涧五组</div> -->
 							</div>
@@ -70,7 +71,7 @@
 								<div class="a-question" @click="gotoDetail(asking.id, loginUser.userId)">{{ asking.content }}</div>
 							</a>
 							<div class="address_c" @click="gotoDetail(asking.id, loginUser.userId)">
-								<div class="a-location" style="padding-top: 10px;"><img src="../assets/icon_address.png" style="width: 12px;height: 17px;" /></div>
+								<div class="a-location" style="padding-top: 10px;"><img src="/static/icon_address.png" style="width: 12px;height: 17px;" /></div>
 								<div class="location" style="padding-top: 10px;">&nbsp;&nbsp;{{ asking.address }}</div>
 								<!-- <div class="location" style="padding-top: 10px;">&nbsp;&nbsp;江苏省盐城市射阳县018乡道靠近三涧五组</div> -->
 							</div>
@@ -103,7 +104,7 @@
 								<div class="a-question" @click="gotoDetail(asking.id, loginUser.userId)">{{ asking.content }}</div>
 							</a>
 							<div class="address_c" @click="gotoDetail(asking.id, loginUser.userId)">
-								<div class="a-location" style="padding-top: 10px;"><img src="../assets/icon_address.png" style="width: 12px;height: 17px;" /></div>
+								<div class="a-location" style="padding-top: 10px;"><img src="/static/icon_address.png" style="width: 12px;height: 17px;" /></div>
 								<div class="location" style="padding-top: 10px;">&nbsp;&nbsp;{{ asking.address }}</div>
 								<!-- <div class="location" style="padding-top: 10px;">&nbsp;&nbsp;江苏省盐城市射阳县018乡道靠近三涧五组</div> -->
 							</div>
@@ -136,7 +137,7 @@
 								<div class="a-question" @click="gotoDetail(asking.id, loginUser.userId)">{{ asking.content }}</div>
 							</a>
 							<div class="address_c" @click="gotoDetail(asking.id, loginUser.userId)">
-								<div class="a-location" style="padding-top: 10px;"><img src="../assets/icon_address.png" style="width: 12px;height: 17px;" /></div>
+								<div class="a-location" style="padding-top: 10px;"><img src="/static/icon_address.png" style="width: 12px;height: 17px;" /></div>
 								<div class="location" style="padding-top: 10px;">&nbsp;&nbsp;{{ asking.address }}</div>
 								<!-- <div class="location" style="padding-top: 10px;">&nbsp;&nbsp;江苏省盐城市射阳县018乡道靠近三涧五组</div> -->
 							</div>
@@ -169,7 +170,7 @@
 								<div class="a-question" @click="gotoDetail(asking.id, loginUser.userId)">{{ asking.content }}</div>
 							</a>
 							<div class="address_c" @click="gotoDetail(asking.id, loginUser.userId)">
-								<div class="a-location" style="padding-top: 10px;"><img src="../assets/icon_address.png" style="width: 12px;height: 17px;" /></div>
+								<div class="a-location" style="padding-top: 10px;"><img src="/static/icon_address.png" style="width: 12px;height: 17px;" /></div>
 								<div class="location" style="padding-top: 10px;">&nbsp;&nbsp;{{ asking.address }}</div>
 								<!-- <div class="location" style="padding-top: 10px;">&nbsp;&nbsp;江苏省盐城市射阳县018乡道靠近三涧五组</div> -->
 							</div>
@@ -202,7 +203,7 @@
 								<div class="a-question" @click="gotoDetail(asking.id, loginUser.userId)">{{ asking.content }}</div>
 							</a>
 							<div class="address_c" @click="gotoDetail(asking.id, loginUser.userId)">
-								<div class="a-location" style="padding-top: 10px;"><img src="../assets/icon_address.png" style="width: 12px;height: 17px;" /></div>
+								<div class="a-location" style="padding-top: 10px;"><img src="/static/icon_address.png" style="width: 12px;height: 17px;" /></div>
 								<div class="location" style="padding-top: 10px;">&nbsp;&nbsp;{{ asking.address }}</div>
 								<!-- <div class="location" style="padding-top: 10px;">&nbsp;&nbsp;江苏省盐城市射阳县018乡道靠近三涧五组</div> -->
 							</div>
@@ -448,7 +449,7 @@ export default {
 	text-align: center;
 	color: black;
 	line-height: 64px;
-	background-image: url(../assets/icon_category_08.png);
+	background-image: url(/static/icon_category_08.png);
 	font-size: 1.17em;
 	font-weight: bold;
 }

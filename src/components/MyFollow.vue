@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<div class="block">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord"
 					:page-size="pageSize" :current-page="currPage"
 					@current-change="handleCurrentChange"
@@ -34,7 +34,7 @@
 			<div class="none" v-show="show">
 				<div class="none-text">
 					<div class="img">
-						<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+						<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 					</div>
 					<span>暂无内容</span>
 				</div>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<div class="block">
-					<el-pagination 
+					<el-pagination
 					background layout="prev, pager, next,jumper" :total="totalRecord_e"
 					:page-size="pageSize" :current-page="currPage_e"
 					@current-change="handleCurrentChange_e"
@@ -70,7 +70,7 @@
 			<div class="none" v-show="show_e">
 				<div class="none-text">
 					<div class="img">
-						<img src="../assets/铁锹.png" style="height: 70px;width: 70px;" />
+						<img src="/static/铁锹.png" style="height: 70px;width: 70px;" />
 					</div>
 					<span>暂无内容</span>
 				</div>
@@ -129,7 +129,7 @@
 				if(content.length>65){
 					return content.substring(0,65)+'...[详情]';
 				}else{
-					return content.substring(0,65)	
+					return content.substring(0,65)
 				}
 			},
 			gotoDetail: function(id,userId) {
@@ -248,42 +248,42 @@
 		border-bottom: 1px solid rgb(114, 114, 114);
 		line-height: 50px;
 	}
-	
+
 	.list_text {
 		text-decoration: none;
 		color: rgb(109, 109, 109);
 		padding: 1em 4em;
 	}
-	
+
 	.top-text {
 		width: 50%;
 		text-align: center;
 	}
-	
+
 	.nav-item {
 		text-decoration: none;
 		color: rgb(109, 109, 109);
 		font-size: 16px;
 	}
-	
+
 	.cur {
 		text-decoration: none;
 		color: rgb(0, 158, 1);
 		font-size: 16px;
 		border-bottom: 3px solid rgb(0, 158, 1);
 	}
-	
+
 	.cur1 {
 		color: rgb(0, 158, 1);
 	}
 	.question-content span {
 		font-size: 17px;
 	}
-	
+
 	.bottom span {
 		color: rgb(109,109,109);
 	}
-	
+
 	.content {
 		width: 100%;
 		border-top: 2px solid rgb(244, 244, 244);
@@ -291,7 +291,7 @@
 		margin-bottom: 5px;
 		background-color: #FFFFFF;
 	}
-	
+
 	.list {
 		width: 95%;
 		margin: 0 auto;
@@ -299,7 +299,7 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	
+
 	.sort {
 		background-color: rgb(233, 102, 53);
 		height: 25px;
@@ -309,7 +309,7 @@
 		border-radius: 4px;
 		margin-right: 5px;
 	}
-	
+
 	.q-content {
 		width: 90%;
 	}

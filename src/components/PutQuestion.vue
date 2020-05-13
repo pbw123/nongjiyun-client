@@ -32,7 +32,7 @@
                 </el-dialog>
 			</div>
 			<div class="address">
-				<img src="../assets/icon_address.png" style="height: 20px;width: 17px;"/>
+				<img :src="icon" style="height: 20px;width: 17px;"/>
 				<span style="margin-left: 5px;">{{LocationCity}}</span>
 			</div>
 			<div class="btn">
@@ -48,7 +48,8 @@
 	  name: 'putQuestion',
 		data(){
 			return{
-        // upload:'http://localhost:7777/api/img/insetImg',
+        icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
+        // upload:'https://localhost:7777/api/img/insetImg',
         upload:'https://jack.panbingwen.cn:7777/api/img/insetImg',
         loginUser:JSON.parse(localStorage.getItem('login_key')),
 				question:{
