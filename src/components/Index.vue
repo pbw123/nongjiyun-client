@@ -95,7 +95,12 @@
 				</div>
 			</div>
 			<div class="end">
-				<p class="end_text">Copyright©2017 江苏农村经济杂志社 版权所有 苏ICP备06039616号-3</p>
+
+				<p class="end_text">
+          <a href="http://www.beian.miit.gov.cn/" >
+            桂ICP备19007129号-1
+          </a>
+        </p>
 			</div>
 		</div>
 	</div>
@@ -110,6 +115,7 @@
 		name: 'Index',
 		data() {
 			return {
+
         icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
         img: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/72d6efca-14c9-481b-b073-f45d68578449.jpg',
 				storageData: {},
@@ -140,6 +146,7 @@
 			}, 1000);
 		},
 		methods: {
+
 		  //回到首页
       getHome() {
         this.$router.push('/home');
@@ -340,5 +347,11 @@
 
 	.end_text {
 		text-align: center;
+    color: white;
+
 	}
+  a{
+    text-decoration:none;
+    color:white;
+  }
 </style>

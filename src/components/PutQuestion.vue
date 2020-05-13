@@ -17,7 +17,8 @@
 			<div class="neirong" style="display: flex;">
 				<span>问题内容：</span>
 				<div style="width: 80%;">
-				    <el-input type="textarea" :rows="4" v-model="question.content" placeholder="请详细描述您遇到的问题.例如:植物类型？生长期？发病部位等信息,以方便专家解答." />
+				    <el-input type="textarea" :rows="4" v-model="question.content"
+                      :placeholder="placeholder" :maxLength="maxLength" />
 				</div>
 			</div>
 			<div class="tupian">
@@ -48,6 +49,8 @@
 	  name: 'putQuestion',
 		data(){
 			return{
+        maxLength: 40,
+        placeholder: '请详细描述您遇到的问题.例如:植物类型？生长期？发病部位等信息,以方便专家解答.',
         icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
         // upload:'https://localhost:7777/api/img/insetImg',
         upload:'https://jack.panbingwen.cn:7777/api/img/insetImg',
@@ -90,7 +93,28 @@
 		},
 		methods:{
 			putQuestion:function(){
-				var _this=this;
+				let _this=this;
+        if (_this.question.content.trim().length == 0||_this.question.content.trim()==='') {
+          Message({
+            message:'请输入内容',
+            type:'warning',
+          });
+          return;
+        }
+        if (_this.question.content.trim().length < 5) {
+          Message({
+            message:'至少5个字符',
+            type:'warning',
+          });
+          return;
+        }
+        if (_this.question.fenlei.trim().length == 0||_this.question.fenlei==='') {
+          Message({
+            message:'请选择分类',
+            type:'warning',
+          });
+          return;
+        }
 				_this.$http({
 					method:'POST',
 					url:this.apiServer+'api/question/add?content=' + _this.question.content + '&userId=' + _this.loginUser.userId +
@@ -111,7 +135,7 @@
 							type:'error',
 						});
 					}
-				})
+				});
 			},
 			handleAvatarSuccess(res, file) {
 				this.imageUrl = URL.createObjectURL(file.raw);

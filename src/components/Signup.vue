@@ -208,6 +208,7 @@
 			};
 		},
 		methods: {
+
 			/*二级联动选择地区*/
 			getProv: function(prov) {
 				let tempCity = [];
@@ -421,7 +422,7 @@
 					}
 				}).then(function(res) {
 					if (res.data.code == 0) {
-						// alert("验证码已发送,请查看")
+            // alert("验证码已发送,请查看")
 						_this.$alert('验证码已发送,请注意查看。', '验证码发送', {
 						    confirmButtonText: '确定',
 						    callback: action => {

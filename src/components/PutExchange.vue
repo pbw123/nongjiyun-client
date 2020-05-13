@@ -8,7 +8,8 @@
 			<div class="neirong" style="display: flex;">
 				<span>交流内容：</span>
 				<div style="width: 80%;">
-					<el-input type="textarea" :rows="6" v-model="content" placeholder="请输入内容:" />
+					<el-input type="textarea" :rows="6" v-model="content"
+                    :maxLength="maxLength"  placeholder="请输入内容:" />
 				</div>
 			</div>
 			<div class="tupian">
@@ -41,6 +42,7 @@
 		name: 'putExchange',
 		data() {
 			return {
+        maxLength: 40,
         icon: 'https://save-pan.oss-cn-shanghai.aliyuncs.com/img/4eefe204-1f17-4bed-ae48-de4639853b1b.jpg',
 				loginUser: JSON.parse(localStorage.getItem('login_key')),
 				content: '',
@@ -59,7 +61,22 @@
 		},
 		methods: {
 			putExchange: function() {
-				var _this = this;
+				let _this = this;
+        if (_this.content.trim().length == 0||_this.content.trim()==='') {
+          Message({
+            message:'请输入内容',
+            type:'warning',
+          });
+          return;
+        }
+        if (_this.content.trim().length < 5) {
+          Message({
+            message:'至少5个字符',
+            type:'warning',
+          });
+          return;
+        }
+
 				_this.$http({
 					method: 'POST',
 					url: this.apiServer+'api/exchange/add?content=' + _this.content + '&userId=' + _this.loginUser.userId +
