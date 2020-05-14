@@ -6,6 +6,9 @@ import axios from 'axios'
 import VideoPlayer from 'vue-video-player'
 // import BMap from 'BMap'
 import App from './App'
+import vueWechatTitle from 'vue-wechat-title'
+Vue.use(vueWechatTitle)
+
 
 Vue.use(VideoPlayer);
 Vue.use(ElementUI);

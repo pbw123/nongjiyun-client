@@ -129,7 +129,12 @@
 							type:'success',
 						});
 						_this.$router.push('/ask');
-					}else{
+					}else if (res.data.code === 13) {
+            Message({
+              message: res.data.msg,
+              type: 'warning'
+            });
+          }else{
 						Message({
 							message:'发布失败!！',
 							type:'error',

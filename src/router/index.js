@@ -14,7 +14,7 @@ export default new Router({
 			redirect: 'home',
 			component: resolve => require(['../components/Index.vue'], resolve),
 			meta: {
-				title: '主页'
+				title: '首页'
 			},
 			children: [{
 					//首页

@@ -18,7 +18,8 @@
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1",
     "vue-sweetalert2": "^2.0.5",
-    "vue-video-player": "^5.0.2"
+    "vue-video-player": "^5.0.2",
+    "vue-wechat-title": "^2.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

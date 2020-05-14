@@ -34,7 +34,8 @@
 		</div>
 		<div class="myanswer">
 			<span>回答：</span>
-			<div class="answer-input" style="width: 300px;"><el-input type="text" v-model="myanswer" placeholder="我来回答!!" /></div>
+			<div class="answer-input" style="width: 300px;">
+        <el-input type="text" v-model="myanswer" placeholder="我来回答!!" maxLength="40"/></div>
 			<button class="answer-btn" @click="answer">提交</button>
 		</div>
 		<div class="container1">
@@ -175,6 +176,13 @@ export default {
 			console.log('内容:' + _this.myanswer + ';用户Id:' + _this.loginuser.userId + ';提问Id:' + _this.aId);
 			console.log('questionUser:id(' + _this.questionUser.id + ')');
 			if (_this.myanswer.split('').join('') != 0 && _this.myanswer.length != 0 && _this.myanswer != null) {
+        if (_this.myanswer.trim().length < 5) {
+          Message({
+            message:'至少5个字符',
+            type:'warning',
+          });
+          return;
+        }
 				_this
 					.$http({
 						method: 'POST',
@@ -194,9 +202,16 @@ export default {
 								message: '评论成功！',
 								type: 'success'
 							});
+
 							_this.getAskDetil();
 							_this.myanswer = '';
-						} else {
+						} else if (res.data.code === 13) {
+              Message({
+                message: res.data.msg,
+                type: 'warning'
+              });
+            }
+						else {
 							Message({
 								message: '评论失败！',
 								type: 'error'

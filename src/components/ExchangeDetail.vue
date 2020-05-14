@@ -38,7 +38,8 @@
 		</div>
 		<div class="myanswer" style="width: 100%;border-bottom: 2px solid #fafafa;display: flex;">
 			<span style="margin-left: 2%;font-size: 17px;margin-top: 5px;">回答：</span>
-			<div class="answer-input" style="width: 300px;margin-top: 5px;margin-bottom: 5px;"><el-input type="text" :rows="1" v-model="myanswer" placeholder="我来回答!!" /></div>
+			<div class="answer-input" style="width: 300px;margin-top: 5px;margin-bottom: 5px;">
+        <el-input type="text" :rows="1" v-model="myanswer" placeholder="我来回答!!" maxLength="40" /></div>
 			<button class="answer-btn" @click="answer()">提交</button>
 		</div>
 		<div class="container1">
@@ -175,11 +176,18 @@ export default {
 		},
 		answer: function() {
 			var _this = this;
-			console.log('myanswer:' + _this.myanswer);
-			console.log('userId:' + _this.loginuser.userId);
+
+			// console.log('myanswer:' + _this.myanswer);
+			// console.log('userId:' + _this.loginuser.userId);
 			if (_this.myanswer.split('').join('') != 0 && _this.myanswer.length != 0 && _this.myanswer != null) {
-				_this
-					.$http({
+        if (_this.myanswer.trim().length < 5) {
+          Message({
+            message:'至少5个字符',
+            type:'warning',
+          });
+          return;
+        }
+				_this.$http({
 						method: 'POST',
 						url: this.apiServer + 'api/exchange/reply?content=' + _this.myanswer + '&exchangeId=' + _this.eId + '&userId=' + _this.loginuser.userId,
 						header: {
@@ -194,7 +202,13 @@ export default {
 							});
 							_this.getExchangDetil();
 							_this.myanswer = '';
-						} else {
+						}else if (res.data.code === 13) {
+              Message({
+                message: res.data.msg,
+                type: 'warning'
+              });
+            }
+						else {
 							Message({
 								message: '评论失败！',
 								type: 'error'
